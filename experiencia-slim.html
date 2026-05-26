@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Experiencia Slim · Leidy Saa · Cali</title>
+<meta name="description" content="Valoración integrativa con escáner médico SECA mBCA 545 + reflexología podal. Entiende por qué tu cuerpo no baja de peso. Sin pastillas, sin inyecciones, sin dietas extremas." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF6EE;
+    --surface: #FFFFFF;
+    --text: #404659;
+    --text-soft: #6B6862;
+    --text-mute: #9B8E89;
+    --primary: #A39773;
+    --primary-dark: #847A5D;
+    --primary-light: #E8DCC4;
+    --secondary: #404659;
+    --accent: #C9B898;
+    --gold: #DD9059;
+    --border: #EBE2D2;
+    --shadow: 0 12px 40px rgba(64, 70, 89, 0.08);
+    --shadow-strong: 0 20px 60px rgba(64, 70, 89, 0.14);
+    --radius: 14px;
+    --radius-lg: 24px;
+    --maxw: 1100px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  h1 { font-size: clamp(2.3rem, 5.2vw, 4rem); }
+  h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 1rem; }
+  h3 { font-size: clamp(1.3rem, 2.2vw, 1.55rem); margin-bottom: 0.6rem; }
+
+  p { margin-bottom: 1rem; color: var(--text-soft); }
+  p strong { color: var(--text); font-weight: 600; }
+  a { color: var(--primary); text-decoration: none; }
+
+  .container {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- TOP BAR ---------- */
+  .topbar {
+    background: var(--secondary);
+    color: #fff;
+    padding: 10px 0;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  .topbar a { color: var(--gold); }
+
+  /* ---------- HEADER ---------- */
+  header {
+    background: rgba(250, 246, 240, 0.95);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+    max-width: var(--maxw);
+    margin: 0 auto;
+  }
+  .brand img { height: 50px; width: auto; display: block; }
+
+  /* ---------- BUTTONS ---------- */
+  .btn {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary);
+    cursor: pointer;
+    text-align: center;
+  }
+  .btn:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(132, 122, 93, 0.3);
+  }
+  .btn-wa {
+    background: #25D366;
+    border-color: #25D366;
+    color: #fff;
+  }
+  .btn-wa:hover {
+    background: #1FB257;
+    border-color: #1FB257;
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.35);
+  }
+  .btn-gold {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: #fff;
+  }
+  .btn-gold:hover {
+    background: #C57A48;
+    border-color: #C57A48;
+  }
+  .btn-outline {
+    background: transparent;
+    color: var(--primary);
+  }
+  .btn-outline:hover {
+    background: var(--primary);
+    color: #fff;
+  }
+  .btn-lg { padding: 19px 40px; font-size: 1.02rem; }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    padding: 70px 0 80px;
+    background:
+      radial-gradient(circle at 80% 20%, rgba(163, 151, 115, 0.14), transparent 50%),
+      radial-gradient(circle at 10% 90%, rgba(64, 70, 89, 0.06), transparent 50%),
+      var(--bg);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero .tag {
+    display: inline-block;
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    padding: 8px 18px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 26px;
+  }
+  .hero h1 {
+    max-width: 880px;
+    margin: 0 auto 20px;
+    color: var(--text);
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--primary);
+  }
+  .hero .subtitle {
+    font-size: 1.15rem;
+    max-width: 680px;
+    margin: 0 auto 36px;
+    color: var(--text-soft);
+  }
+  .hero .ctas {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .hero .trust {
+    margin-top: 36px;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    font-size: 0.86rem;
+    color: var(--text-mute);
+  }
+  .hero .trust span { display: flex; align-items: center; gap: 8px; }
+  .hero .trust .dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
+
+  /* ---------- SECTIONS ---------- */
+  section { padding: 70px 0; }
+  section.alt { background: var(--surface); }
+
+  .section-tag {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .section-head {
+    text-align: center;
+    max-width: 740px;
+    margin: 0 auto 50px;
+  }
+  .section-head h2 em {
+    font-style: italic;
+    color: var(--primary);
+  }
+  .section-head p {
+    font-size: 1.08rem;
+    margin-top: 14px;
+  }
+
+  /* ---------- PAIN SECTION ---------- */
+  .pain {
+    background: linear-gradient(135deg, rgba(163, 151, 115, 0.06) 0%, rgba(232, 220, 196, 0.2) 100%), var(--bg);
+  }
+  .pain-content {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .pain-content h2 { margin-bottom: 28px; }
+  .pain-content h2 em { font-style: italic; color: var(--primary); }
+  .pain-content .pain-list {
+    font-size: 1.18rem;
+    line-height: 1.85;
+    color: var(--text-soft);
+    margin-bottom: 30px;
+  }
+  .pain-content .truth {
+    margin-top: 36px;
+    padding: 30px 32px;
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--gold);
+    text-align: left;
+    box-shadow: var(--shadow);
+  }
+  .pain-content .truth strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--secondary);
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .pain-content .truth p {
+    margin: 0;
+    font-size: 1.05rem;
+    color: var(--text);
+  }
+
+  /* ---------- WHAT IS (3 PILLARS) ---------- */
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+  }
+  .pillar {
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border);
+    text-align: center;
+  }
+  .pillar:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-strong);
+  }
+  .pillar .icon {
+    width: 64px;
+    height: 64px;
+    background: var(--primary-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.7rem;
+  }
+  .pillar h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.45rem;
+    color: var(--secondary);
+    margin-bottom: 10px;
+  }
+  .pillar p {
+    font-size: 0.96rem;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* ---------- TAKE WITH YOU ---------- */
+  .take {
+    background: linear-gradient(135deg, #F0E7D3 0%, var(--bg) 100%);
+  }
+  .take-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .take-card {
+    background: var(--surface);
+    padding: 36px 32px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+  }
+  .take-card.yes { border-top: 5px solid var(--secondary); }
+  .take-card.no { border-top: 5px solid #C44A3B; }
+  .take-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.55rem;
+    margin-bottom: 20px;
+    color: var(--text);
+  }
+  .no-list {
+    list-style: none;
+    margin: 0;
+  }
+  .no-list li {
+    padding: 9px 0 9px 34px;
+    position: relative;
+    color: var(--text-soft);
+    font-size: 0.98rem;
+    line-height: 1.5;
+  }
+  .no-list li.no::before {
+    content: "✕";
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 22px;
+    height: 22px;
+    background: #F5E8E3;
+    color: #C44A3B;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+  .no-list li.yes::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 22px;
+    height: 22px;
+    background: #E0EBE3;
+    color: var(--secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  /* ---------- DIFFERENTIATORS ---------- */
+  .differentiators {
+    background: var(--surface);
+  }
+  .diff-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  .diff-card {
+    background: var(--bg);
+    padding: 36px 32px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .diff-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+  }
+  .diff-card .badge {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    color: var(--primary-dark);
+    background: var(--primary-light);
+    padding: 5px 12px;
+    border-radius: 100px;
+  }
+  .diff-card .diff-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--secondary);
+    color: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 22px;
+  }
+  .diff-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.55rem;
+    color: var(--secondary);
+    margin-bottom: 12px;
+  }
+  .diff-card p {
+    margin-bottom: 14px;
+    font-size: 0.98rem;
+  }
+  .diff-card ul {
+    list-style: none;
+    margin-top: 14px;
+  }
+  .diff-card ul li {
+    padding: 6px 0 6px 22px;
+    position: relative;
+    color: var(--text-soft);
+    font-size: 0.93rem;
+  }
+  .diff-card ul li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  /* ---------- FOR YOU IF ---------- */
+  .for-you {
+    background:
+      radial-gradient(circle at 90% 10%, rgba(94, 122, 106, 0.07), transparent 50%),
+      var(--surface);
+  }
+  .for-you-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 26px;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  .for-you-grid .item {
+    display: flex;
+    gap: 14px;
+    padding: 18px 20px;
+    background: var(--bg);
+    border-radius: var(--radius);
+    align-items: flex-start;
+    transition: transform 0.3s ease;
+  }
+  .for-you-grid .item:hover { transform: translateX(5px); }
+  .for-you-grid .item .check {
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    background: var(--secondary);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+  .for-you-grid .item p {
+    margin: 0;
+    color: var(--text);
+    font-size: 0.98rem;
+    line-height: 1.5;
+  }
+
+  /* ---------- ANCHOR PHRASE ---------- */
+  .anchor {
+    background: var(--secondary);
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+  }
+  .anchor h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.9rem, 4.6vw, 3rem);
+    line-height: 1.3;
+    font-weight: 400;
+    max-width: 780px;
+    margin: 0 auto;
+    color: #fff;
+  }
+  .anchor h2 strong {
+    color: var(--primary-light);
+    font-weight: 600;
+    font-style: italic;
+  }
+  .anchor p {
+    margin-top: 22px;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(255,255,255,0.78);
+    font-size: 1.08rem;
+  }
+
+  /* ---------- ABOUT (BRIEF) ---------- */
+  .about {
+    background: var(--bg);
+  }
+  .about-wrap {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .about-wrap h2 em { color: var(--primary); font-style: italic; }
+  .about-wrap p { font-size: 1.05rem; }
+  .credentials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 28px;
+  }
+  .credentials span {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    padding: 7px 15px;
+    border-radius: 100px;
+    font-size: 0.83rem;
+    font-weight: 500;
+  }
+
+  /* ---------- PRICING ---------- */
+  .pricing {
+    background: linear-gradient(135deg, var(--secondary) 0%, #2D3247 100%);
+    color: #fff;
+    text-align: center;
+  }
+  .pricing .section-tag { color: var(--gold); }
+  .pricing h2 {
+    color: #fff;
+    max-width: 720px;
+    margin: 0 auto 24px;
+  }
+  .pricing h2 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .pricing .subhead {
+    color: rgba(255,255,255,0.78);
+    font-size: 1.05rem;
+    max-width: 620px;
+    margin: 0 auto 30px;
+  }
+  .price-card {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.14);
+    padding: 44px 36px;
+    border-radius: var(--radius-lg);
+    max-width: 520px;
+    margin: 36px auto 0;
+  }
+  .price-card .price-tag-promo {
+    display: inline-block;
+    background: var(--gold);
+    color: #fff;
+    padding: 5px 14px;
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .price-card .old-price {
+    text-decoration: line-through;
+    color: rgba(255,255,255,0.5);
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+  }
+  .price-card .new-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.2rem;
+    color: var(--gold);
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .price-card .note {
+    color: rgba(255,255,255,0.72);
+    font-size: 0.92rem;
+    margin-bottom: 26px;
+    line-height: 1.55;
+  }
+  .price-card .note strong { color: #fff; }
+  .price-card .price-includes {
+    margin: 0 0 26px;
+    padding: 16px 0;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    list-style: none;
+    text-align: left;
+  }
+  .price-card .price-includes li {
+    color: rgba(255,255,255,0.88);
+    font-size: 0.94rem;
+    padding: 6px 0 6px 26px;
+    position: relative;
+  }
+  .price-card .price-includes li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    color: var(--gold);
+    font-weight: 700;
+  }
+  .price-card .ctas-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .pricing .urgency {
+    margin-top: 24px;
+    color: rgba(255,255,255,0.72);
+    font-size: 0.92rem;
+  }
+  .pricing .urgency strong { color: var(--gold); }
+
+  /* ---------- FAQ ---------- */
+  .faq-list {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .faq-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 14px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .faq-item summary {
+    padding: 20px 26px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.02rem;
+    color: var(--text);
+    list-style: none;
+    position: relative;
+    padding-right: 56px;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: var(--primary);
+    transition: transform 0.3s ease;
+    font-weight: 300;
+  }
+  .faq-item[open] summary::after {
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .faq-item .answer {
+    padding: 0 26px 22px;
+    color: var(--text-soft);
+    line-height: 1.7;
+  }
+
+  /* ---------- FINAL CTA STRIP ---------- */
+  .final-strip {
+    background: linear-gradient(135deg, var(--primary-light) 0%, #F0E7D3 100%);
+    text-align: center;
+  }
+  .final-strip h2 {
+    max-width: 700px;
+    margin: 0 auto 22px;
+    color: var(--secondary);
+  }
+  .final-strip h2 em { color: var(--primary); font-style: italic; }
+  .final-strip p {
+    max-width: 600px;
+    margin: 0 auto 28px;
+    font-size: 1.05rem;
+    color: var(--text);
+  }
+  .final-strip .ctas-row {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    background: var(--secondary);
+    color: rgba(255,255,255,0.7);
+    padding: 50px 0 26px;
+    font-size: 0.94rem;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 36px;
+  }
+  footer h4 {
+    color: #fff;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  footer p { color: rgba(255,255,255,0.72); margin-bottom: 6px; }
+  footer a { color: var(--gold); }
+  footer a:hover { color: #fff; }
+  .footer-brand img { height: 60px; width: auto; filter: brightness(1.1); margin-bottom: 14px; }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 22px;
+    text-align: center;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 900px) {
+    section { padding: 55px 0; }
+    .hero { padding: 50px 0 65px; }
+    .pillars { grid-template-columns: 1fr; }
+    .diff-cards { grid-template-columns: 1fr; }
+    .take-wrap { grid-template-columns: 1fr; gap: 30px; }
+    .for-you-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+    .anchor { padding: 60px 0; }
+  }
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    .hero .ctas { flex-direction: column; align-items: center; }
+    .hero .ctas .btn { width: 100%; max-width: 320px; }
+    .price-card { padding: 34px 22px; }
+    .take-card { padding: 30px 22px; }
+    .final-strip .ctas-row { flex-direction: column; align-items: center; }
+    .final-strip .ctas-row .btn { width: 100%; max-width: 320px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  📍 Cali · Calle 13 #68-26, El Limonar L104 · <a href="https://wa.me/573145606707?text=Hola%20quiero%20saber%20m%C3%A1s%20sobre%20la%20Experiencia%20Slim">WhatsApp +57 314 560 6707</a>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="nav">
+    <a href="#" class="brand" aria-label="Leidy Saa">
+      <img src="logo-leidysaa.png" alt="Leidy Saa · Logo" />
+    </a>
+    <a href="#reservar" class="btn btn-outline" style="padding: 11px 22px; font-size: 0.88rem;">Reservar</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <span class="tag">Experiencia Slim · Cali</span>
+    <h1>Por fin vas a <em>entender</em> por qué tu cuerpo no baja de peso.</h1>
+    <p class="subtitle">
+      Una valoración integrativa con <strong>escáner médico + reflexología podal</strong> donde leemos
+      tu cuerpo, tu mente y tus emociones — para que dejes de pelearte con la balanza y empieces a tratarte distinto.
+    </p>
+    <div class="ctas">
+      <a href="https://wa.me/573145606707?text=Hola%20quiero%20reservar%20mi%20Experiencia%20Slim" class="btn btn-wa btn-lg" target="_blank" rel="noopener">
+        Escríbele a Gabriela por WhatsApp
+      </a>
+      <a href="#reservar" class="btn btn-outline btn-lg">Ver más detalles</a>
+    </div>
+    <div class="trust">
+      <span><span class="dot"></span> Escáner médico SECA mBCA 545</span>
+      <span><span class="dot"></span> Incluye reflexología podal</span>
+      <span><span class="dot"></span> Sin pastillas · Sin inyecciones</span>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN / CONEXIÓN -->
+<section class="pain">
+  <div class="container">
+    <div class="pain-content">
+      <span class="section-tag">Para ti</span>
+      <h2>Sabes que ya lo <em>probaste todo</em>… y sigues sintiéndote igual.</h2>
+      <div class="pain-list">
+        Dietas que dejaste a las dos semanas.<br />
+        Productos que prometieron milagros.<br />
+        Días buenos, recaídas, empezar de cero cada lunes.
+      </div>
+      <p style="font-size: 1.08rem; color: var(--text);">
+        Te miras al espejo y no te reconoces. Evitas las fotos. La ropa que amabas hoy te incomoda.
+        Y nadie — ni el médico, ni la nutricionista de turno — te ha sentado a explicarte
+        <strong>qué está pasando dentro de ti.</strong>
+      </p>
+      <div class="truth">
+        <strong>La verdad es esta:</strong>
+        <p>Tu cuerpo no es el problema. El problema es que <strong>nadie te ha mirado completa</strong> —
+        cuerpo, mente y emociones. Y eso es exactamente lo que vamos a hacer en la Experiencia Slim.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANCHOR / CORE PROMISE -->
+<section class="anchor">
+  <div class="container">
+    <h2>
+      No es una dieta más.<br />
+      No es otra báscula.<br />
+      <strong>Es el día en que empiezas a conocerte de verdad.</strong>
+    </h2>
+    <p>Porque no puedes transformar lo que no entiendes. Y nadie baja de peso peleando con un cuerpo que no conoce.</p>
+  </div>
+</section>
+
+<!-- WHAT IS · 3 PILLARS -->
+<section class="alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Qué es la Experiencia Slim</span>
+      <h2>Una valoración profunda en <em>tres dimensiones</em>.</h2>
+      <p>60 a 90 minutos donde por fin alguien te lee completa — y te entrega un mapa claro de tu punto de partida.</p>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="icon">🔬</div>
+        <h3>Tu cuerpo por dentro</h3>
+        <p>Escaneamos tu composición corporal con tecnología médica: grasa visceral, masa muscular, hidratación, edad celular y metabolismo basal real.</p>
+      </div>
+
+      <div class="pillar">
+        <div class="icon">🦶</div>
+        <h3>Tus órganos hablando</h3>
+        <p>Con reflexología podal leemos hígado, riñones, intestino, tiroides y sistema linfático — y activamos lo que está bloqueado. Sin químicos.</p>
+      </div>
+
+      <div class="pillar">
+        <div class="icon">💛</div>
+        <h3>Tu historia emocional</h3>
+        <p>Identificamos qué emociones se acomodan en tu comida, qué hábitos vienen de atrás y qué está bloqueando que tu peso baje.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOS 2 PILARES TÉCNICOS · BREVE -->
+<section class="differentiators">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Lo que hace diferente esta cita</span>
+      <h2>Tecnología médica + medicina del tacto, <em>juntas</em>.</h2>
+      <p>Una combinación que casi nadie ofrece en Cali — y que cambia todo lo que sabes sobre tu cuerpo.</p>
+    </div>
+
+    <div class="diff-cards">
+      <div class="diff-card">
+        <span class="badge">DIAGNÓSTICO</span>
+        <div class="diff-icon">📊</div>
+        <h3>Escáner médico SECA mBCA 545</h3>
+        <p>No es una báscula. Es el mismo equipo que usan clínicas y hospitales para medir composición corporal con precisión médica.</p>
+        <ul>
+          <li>Grasa visceral (la que enferma)</li>
+          <li>Edad real de tus células</li>
+          <li>Tu metabolismo basal exacto</li>
+          <li>Análisis músculo a músculo</li>
+        </ul>
+      </div>
+
+      <div class="diff-card">
+        <span class="badge">ACTIVACIÓN</span>
+        <div class="diff-icon">🦶</div>
+        <h3>Reflexología podal (incluida)</h3>
+        <p>Tus pies son el mapa de tus órganos. Tocamos los puntos exactos para activar lo que está sobrecargado y desinflamar tu cuerpo.</p>
+        <ul>
+          <li>Activa tu sistema linfático</li>
+          <li>Estimula tu metabolismo natural</li>
+          <li>Libera órganos bloqueados</li>
+          <li>Reduce inflamación visible</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TAKE WITH YOU -->
+<section class="take">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Qué te llevas</span>
+      <h2>El día que vives la Experiencia Slim…</h2>
+    </div>
+    <div class="take-wrap">
+      <div class="take-card yes">
+        <h3>Sí te llevas</h3>
+        <ul class="no-list">
+          <li class="yes">Escáner médico completo de tu composición corporal</li>
+          <li class="yes">Sesión de reflexología podal (incluida)</li>
+          <li class="yes">Lectura de tu relación con la comida</li>
+          <li class="yes">Mapa personalizado de tu punto de partida</li>
+          <li class="yes">Primeros pasos diseñados para tu caso</li>
+          <li class="yes">La claridad que llevas años buscando</li>
+        </ul>
+      </div>
+      <div class="take-card no">
+        <h3>No te llevas</h3>
+        <ul class="no-list">
+          <li class="no">Inyecciones para bajar de peso</li>
+          <li class="no">Pastillas ni medicamentos</li>
+          <li class="no">Una dieta genérica de internet</li>
+          <li class="no">Promesas de milagros en 7 días</li>
+          <li class="no">Sermones de "fuerza de voluntad"</li>
+          <li class="no">Soluciones químicas que tu cuerpo no necesita</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR YOU IF -->
+<section class="for-you">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Esta cita es para ti si</span>
+      <h2>Reconoces alguna de <em>estas señales</em></h2>
+    </div>
+    <div class="for-you-grid">
+      <div class="item"><div class="check">✓</div><p>Sientes que ya lo probaste todo y nada te ha funcionado.</p></div>
+      <div class="item"><div class="check">✓</div><p>Te miras al espejo y no te reconoces.</p></div>
+      <div class="item"><div class="check">✓</div><p>Evitas las fotos y la ropa ajustada.</p></div>
+      <div class="item"><div class="check">✓</div><p>Sabes que algo dentro está bloqueado, pero no sabes qué.</p></div>
+      <div class="item"><div class="check">✓</div><p>Estás cansado de empezar de cero cada lunes.</p></div>
+      <div class="item"><div class="check">✓</div><p>Quieres entender tu cuerpo antes de "ponerte a dieta" otra vez.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT BRIEF -->
+<section class="about">
+  <div class="container">
+    <div class="about-wrap">
+      <span class="section-tag">Quién te acompaña</span>
+      <h2>Soy <em>Leidy Saa</em>.</h2>
+      <p>
+        Psiconutricionista y fisioterapeuta integrativa, con <strong>más de 10 años</strong> acompañando a hombres y mujeres
+        a entender su cuerpo, su mente y sus emociones — para que el peso deje de ser una lucha y se vuelva
+        un proceso de transformación real.
+      </p>
+      <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.25rem; color: var(--primary-dark); margin-top: 24px;">
+        Mi símbolo es el fénix. Porque cada paciente que llega a mi clínica<br />no viene a bajar de peso — viene a renacer.
+      </p>
+      <div class="credentials">
+        <span>Psiconutricionista</span>
+        <span>Fisioterapeuta integrativa</span>
+        <span>Reflexología podal</span>
+        <span>Drenaje linfático</span>
+        <span>+10 años de experiencia</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="reservar">
+  <div class="container">
+    <span class="section-tag">Tu primer paso</span>
+    <h2>Una valoración que cambia <em>todo lo que sabes</em> de tu cuerpo.</h2>
+    <p class="subhead">Una cita extremadamente económica para el nivel de profundidad que recibes — y por tiempo limitado, con reflexología incluida.</p>
+
+    <div class="price-card">
+      <span class="price-tag-promo">Promo activa</span>
+      <div class="old-price">Precio regular: $300.000</div>
+      <div class="new-price">$200.000</div>
+      <div class="note">Valoración integrativa completa<br /><strong>Reflexología podal incluida</strong></div>
+
+      <ul class="price-includes">
+        <li>Escáner médico SECA mBCA 545</li>
+        <li>Sesión de reflexología podal</li>
+        <li>Lectura emocional y nutricional</li>
+        <li>Tu mapa personalizado de inicio</li>
+      </ul>
+
+      <div class="ctas-group">
+        <a href="https://wa.me/573145606707?text=Hola%20Gabriela%2C%20quiero%20reservar%20mi%20Experiencia%20Slim%20a%20%24200.000" class="btn btn-wa btn-lg" target="_blank" rel="noopener">
+          Reservar con Gabriela por WhatsApp
+        </a>
+        <a href="https://checkout.bold.co/payment/LNK_118J77UO37" class="btn btn-gold btn-lg" target="_blank" rel="noopener">
+          Pagar y separar mi cita ahora
+        </a>
+      </div>
+    </div>
+    <p class="urgency">
+      <strong>Cupos limitados por semana</strong> — para garantizar atención personalizada y profunda.
+    </p>
+  </div>
+</section>
+
+<!-- FAQ BREVE -->
+<section class="alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Preguntas frecuentes</span>
+      <h2>Lo que más nos <em>preguntan</em> antes de reservar</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Cuánto dura la cita?</summary>
+        <div class="answer">Entre 60 y 90 minutos. Incluye el escáner SECA mBCA 545, la sesión de reflexología podal, la lectura emocional y la entrega de tu mapa personalizado.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Voy a salir con una dieta?</summary>
+        <div class="answer">No. Salimos con un mapa claro de tu punto de partida y los primeros pasos personalizados según tus resultados. Si después decides continuar con un plan completo, lo construimos sobre estos datos — no sobre suposiciones.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Usan inyecciones o medicamentos?</summary>
+        <div class="answer">No. Nuestro enfoque es 100% natural e integrativo: tecnología médica de diagnóstico, reflexología podal, nutrición consciente y acompañamiento emocional. Nada químico.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué llevo el día de la cita?</summary>
+        <div class="answer">Ropa cómoda. Llega hidratado/a y evita comidas pesadas las 2 horas antes. Trae cualquier examen médico reciente que quieras compartir.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cómo reservo?</summary>
+        <div class="answer">Escríbele a Gabriela por WhatsApp al +57 314 560 6707 y ella te confirma cupo, o paga directamente con el botón de Bold para asegurar tu cita.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA STRIP -->
+<section class="final-strip">
+  <div class="container">
+    <h2>Tu cuerpo lleva años hablándote. <em>Hoy podemos escucharlo juntas.</em></h2>
+    <p>Reserva tu Experiencia Slim por $200.000 (antes $300.000) — incluye escáner médico, reflexología podal y tu mapa personalizado.</p>
+    <div class="ctas-row">
+      <a href="https://wa.me/573145606707?text=Hola%20Gabriela%2C%20quiero%20reservar%20mi%20Experiencia%20Slim" class="btn btn-wa btn-lg" target="_blank" rel="noopener">
+        Escribirle a Gabriela
+      </a>
+      <a href="https://checkout.bold.co/payment/LNK_118J77UO37" class="btn btn-gold btn-lg" target="_blank" rel="noopener">
+        Pagar y reservar ahora
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="logo-leidysaa.png" alt="Leidy Saa" />
+        </div>
+        <p>Psiconutricionista · Fisioterapeuta integrativa.</p>
+        <p>Acompañando a hombres y mujeres a renacer en su cuerpo, su confianza y su bienestar desde hace más de 10 años.</p>
+      </div>
+      <div>
+        <h4>Visítanos</h4>
+        <p>Calle 13 #68-26</p>
+        <p>Barrio El Limonar, L104</p>
+        <p>Cali, Colombia</p>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p><a href="https://wa.me/573145606707">WhatsApp +57 314 560 6707</a></p>
+        <p><a href="https://wa.me/573145606707?text=Hola%20Gabriela%2C%20quiero%20reservar%20mi%20Experiencia%20Slim">Reservar con Gabriela</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © Leidy Saa · Experiencia Slim · Cali, Colombia · Todos los derechos reservados.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
